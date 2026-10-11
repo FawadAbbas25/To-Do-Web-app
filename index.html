@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daily Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Daily Tasks</h1>
+      <p>Plan your day, check things off, and keep a record of what you finished.</p>
+    </header>
+
+    <form class="add-form" id="add-form" autocomplete="off">
+      <input type="text" id="new-task" maxlength="200"
+             placeholder="What needs to get done?" aria-label="New task" />
+      <button type="submit" class="btn-primary">Add Task</button>
+    </form>
+
+    <div class="board">
+      <section class="panel" aria-labelledby="pending-title">
+        <div class="panel-head">
+          <h2 id="pending-title">Pending Tasks</h2>
+          <span class="count" id="pending-count" role="status">0 pending</span>
+        </div>
+        <ul class="tasks" id="pending-list"></ul>
+        <div id="pending-empty"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="completed-title">
+        <div class="panel-head">
+          <h2 id="completed-title">Completed Tasks</h2>
+          <span class="count" id="completed-count" role="status">0 completed</span>
+        </div>
+        <ul class="tasks" id="completed-list"></ul>
+        <div id="completed-empty"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="style.js" defer></script>
+</body>
+</html>
